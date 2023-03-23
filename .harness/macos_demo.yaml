@@ -8,6 +8,7 @@ pipeline:
     ci:
       codebase:
         connectorRef: Nofar_githubcom
+        repoName: CIsamples/macos_demo
         build: <+input>
   stages:
     - stage:
