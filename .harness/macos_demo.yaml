@@ -1,0 +1,34 @@
+pipeline:
+  name: macos_demo
+  identifier: macos_demo
+  projectIdentifier: playground
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: Nofar_githubcom
+        build: <+input>
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: MacOS
+            arch: Arm64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run xcode
+                  identifier: Run_xcode
+                  spec:
+                    shell: Sh
+                    command: xcodebuild
