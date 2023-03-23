@@ -1,5 +1,5 @@
 pipeline:
-  name: marketing_demos
+  name: macOS Hello World
   identifier: macos_demo
   projectIdentifier: Marketing_Demos
   orgIdentifier: default
