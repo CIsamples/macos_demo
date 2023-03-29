@@ -28,6 +28,13 @@ pipeline:
             steps:
               - step:
                   type: Run
+                  name: check xcode version
+                  identifier: xcode_version
+                  spec:
+                    shell: Sh
+                    command: xcodebuild -version
+              - step:
+                  type: Run
                   name: Run xcode
                   identifier: Run_xcode
                   spec:
