@@ -32,14 +32,9 @@ pipeline:
                   identifier: set_xcode_version
                   spec:
                     shell: Sh
-                    command: sudo xcode-select -switch /Applications/Xcode_13.4.1.app
-              - step:
-                  type: Run
-                  name: check xcode version
-                  identifier: xcode_version
-                  spec:
-                    shell: Sh
-                    command: xcodebuild -version
+                    command: |
+                      sudo xcode-select -switch /Applications/Xcode_13.4.1.app
+                      xcodebuild -version
               - step:
                   type: Run
                   name: Run xcode
