@@ -33,3 +33,10 @@ pipeline:
                   spec:
                     shell: Sh
                     command: xcodebuild
+              - step:
+                  type: Run
+                  name: Run_2
+                  identifier: Run_2
+                  spec:
+                    shell: Sh
+                    command: echob 'hey'
