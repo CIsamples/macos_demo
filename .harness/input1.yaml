@@ -1,0 +1,14 @@
+inputSet:
+  name: main
+  identifier: main
+  orgIdentifier: default
+  projectIdentifier: Marketing_Demos
+  pipeline:
+    identifier: macos_demo
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
