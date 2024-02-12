@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_CIsamples_macos_demo_1707781216061-push-trigger-input-set
+  identifier: Build_CIsamples_macos_demo_1707781216061pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_CIsamples_macos_demo_1707781216061
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
