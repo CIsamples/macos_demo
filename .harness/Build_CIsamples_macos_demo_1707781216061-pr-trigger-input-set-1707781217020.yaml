@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_CIsamples_macos_demo_1707781216061-pr-trigger-input-set
+  identifier: Build_CIsamples_macos_demo_1707781216061prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_CIsamples_macos_demo_1707781216061
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
