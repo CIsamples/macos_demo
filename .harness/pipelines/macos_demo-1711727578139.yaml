@@ -1,0 +1,33 @@
+pipeline:
+  name: Build macos_demo
+  identifier: Build_CIsamples_macos_demo_1711727578939
+  projectIdentifier: Nofar
+  orgIdentifier: default
+  stages:
+    - stage:
+        name: Build
+        identifier: Build
+        type: CI
+        spec:
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Echo Welcome Message
+                  identifier: Echo_Welcome_Message
+                  spec:
+                    shell: Sh
+                    command: echo "Welcome to Harness CI"
+          platform:
+            os: Linux
+            arch: Amd64
+          runtime:
+            type: Cloud
+            spec: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: Nofar_Github
+        repoName: CIsamples/macos_demo
+        build: <+input>
