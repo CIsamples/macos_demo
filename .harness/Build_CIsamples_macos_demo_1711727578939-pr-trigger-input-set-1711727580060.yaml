@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_CIsamples_macos_demo_1711727578939-pr-trigger-input-set
+  identifier: Build_CIsamples_macos_demo_1711727578939prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Nofar
+  pipeline:
+    identifier: Build_CIsamples_macos_demo_1711727578939
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
