@@ -12,26 +12,25 @@ pipeline:
         build: <+input>
   stages:
     - stage:
-        name: S1
-        identifier: S1
+        name: jjj
+        identifier: jjj
         description: ""
-        type: CI
+        type: Custom
         spec:
-          cloneCodebase: true
-          caching:
-            enabled: true
-          platform:
-            os: MacOS
-            arch: Arm64
-          runtime:
-            type: Cloud
-            spec: {}
           execution:
             steps:
               - step:
-                  type: Run
-                  name: Run_1
-                  identifier: Run_1
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
                   spec:
-                    shell: Sh
-                    command: echo "hey"
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo hey
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
