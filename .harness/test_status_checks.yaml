@@ -1,0 +1,36 @@
+pipeline:
+  name: test status checks
+  identifier: test_status_checks
+  projectIdentifier: playground
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.github
+        repoName: CIsamples/macos_demo
+        build: <+input>
+  stages:
+    - stage:
+        name: jjj
+        identifier: jjj
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo hey
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}

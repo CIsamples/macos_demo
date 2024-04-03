@@ -33,3 +33,25 @@ pipeline:
                   spec:
                     shell: Sh
                     command: xcodebuild
+    - stage:
+        name: Build2
+        identifier: Build2
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          platform:
+            os: MacOS
+            arch: Arm64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run xcode
+                  identifier: Run_xcode
+                  spec:
+                    shell: Sh
+                    command: xcodebuild
