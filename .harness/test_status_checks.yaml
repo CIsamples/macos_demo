@@ -1,0 +1,37 @@
+pipeline:
+  name: test status checks
+  identifier: test_status_checks
+  projectIdentifier: playground
+  orgIdentifier: default
+  tags: {}
+  properties:
+    ci:
+      codebase:
+        connectorRef: account.github
+        repoName: CIsamples/macos_demo
+        build: <+input>
+  stages:
+    - stage:
+        name: S1
+        identifier: S1
+        description: ""
+        type: CI
+        spec:
+          cloneCodebase: true
+          caching:
+            enabled: true
+          platform:
+            os: MacOS
+            arch: Arm64
+          runtime:
+            type: Cloud
+            spec: {}
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Run_1
+                  identifier: Run_1
+                  spec:
+                    shell: Sh
+                    command: echo "hey"
