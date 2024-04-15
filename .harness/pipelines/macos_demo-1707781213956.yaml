@@ -20,7 +20,7 @@ pipeline:
                     shell: Sh
                     command: |-
                       echo "Welcome to Harness CI"
-                      sleep 1m
+                      sleep 30s
           platform:
             os: Linux
             arch: Amd64
@@ -32,5 +32,5 @@ pipeline:
             paths: []
         strategy:
           repeat:
-            times: 10
+            times: 20
         description: ""
