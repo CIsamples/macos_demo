@@ -28,7 +28,6 @@ pipeline:
         strategy:
           repeat:
             times: 6
-            maxConcurrency: 3
   properties:
     ci:
       codebase:
