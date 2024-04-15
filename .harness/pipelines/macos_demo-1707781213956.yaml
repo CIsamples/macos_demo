@@ -18,7 +18,9 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    command: |-
+                      echo "Welcome to Harness CI"
+                      sleep 1m
           platform:
             os: Linux
             arch: Amd64
@@ -28,6 +30,7 @@ pipeline:
         strategy:
           repeat:
             times: 6
+        description: ""
   properties:
     ci:
       codebase:
