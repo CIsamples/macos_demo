@@ -9,7 +9,7 @@ pipeline:
         identifier: Build
         type: CI
         spec:
-          cloneCodebase: true
+          cloneCodebase: false
           execution:
             steps:
               - step:
@@ -27,13 +27,10 @@ pipeline:
           runtime:
             type: Cloud
             spec: {}
+          caching:
+            enabled: false
+            paths: []
         strategy:
           repeat:
-            times: 6
+            times: 10
         description: ""
-  properties:
-    ci:
-      codebase:
-        connectorRef: account.Github
-        repoName: CIsamples/macos_demo
-        build: <+input>
